@@ -1,4 +1,6 @@
 import {useQuery} from 'react-query';
+import Skeleton from '@mui/material/Skeleton';
+import DataTable from './DataTable';
 
 // References: https://react-query.tanstack.com/guides/queries
 
@@ -16,8 +18,7 @@ function StarWarsTable() {
 
     return (
         <>
-            {isLoading && <div>is loading</div>}
-            <div>star wars table</div>
+            {isLoading ? <Skeleton variant='rectangular'></Skeleton> : <DataTable data={data}/>}
         </>
         
     );

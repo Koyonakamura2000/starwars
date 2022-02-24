@@ -14,7 +14,6 @@ function DataTable(props) {
     for(let i = 0; i < results.length; i++) {
         moviesInfo.push(createData(results[i]['title'], results[i]['episode_id'], results[i]['release_date'], results[i]['director']));
     }
-    console.log(moviesInfo);
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">

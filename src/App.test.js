@@ -7,3 +7,10 @@ test('App', () => {
   screen.debug();
   expect(skeleton).toBeInTheDocument();
 });
+
+test('Table generated after API call', async () => {
+  const {getByText} = render(<App />); 
+  await waitFor(() => {
+    expect(getByText('Episode ID')).toBeInTheDocument();
+  })
+})
